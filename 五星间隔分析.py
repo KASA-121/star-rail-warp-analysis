@@ -42,11 +42,13 @@ with open(OUTPUT, "w", encoding="utf-8-sig", newline="") as f:
         writer.writerow(row)
 
 if gap_list:
-    average_gap = sum(gap_list) / len(gap_list)
+    average_gap = f"{sum(gap_list) / len(gap_list):.2f}"
+    min_gap = min(gap_list)
+    max_gap = max(gap_list)
 else:
-    average_gap = None
+    average_gap = min_gap = max_gap = "无数据"
 
 print(f"统计出来的五星角色抽卡记录一共有:{len(result)}条")
 print(f"其中，五星角色之间的平均间隔为:{average_gap:.2f}")
-print(f"其中，五星角色之间的最小间隔为:{min(gap_list)}")
-print(f"其中，五星角色之间的最大间隔为:{max(gap_list)}")
+print(f"其中，五星角色之间的最小间隔为:{min_gap}")
+print(f"其中，五星角色之间的最大间隔为:{max_gap}")
