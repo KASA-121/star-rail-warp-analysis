@@ -1,0 +1,18 @@
+# Python 运行时自动生成的缓存
+__pycache__/
+*.py[cod]
+
+# 虚拟环境
+venv/
+.venv/
+
+# 编辑器配置
+.idea/
+.vscode/
+
+# 个人原始抽卡记录（含账号信息，不上传）
+data/跃迁记录.txt
+
+# 系统文件
+Thumbs.db
+.DS_Store
